@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jul 21 14:58:14 2021
-
-@author: angelou
-"""
 import torchvision.models.densenet
 import torch
 import torch.nn as nn
