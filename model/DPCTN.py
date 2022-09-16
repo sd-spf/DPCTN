@@ -183,8 +183,7 @@ class Residual(nn.Module):
         return out 
 
 class HA(nn.Module):
-    # dense aggregation, it can be replaced by other aggregation previous, such as DSS, amulet, and so on.
-    # used after MSF
+   
     def __init__(self, channel):
         super(HA, self).__init__()
         self.relu = nn.ReLU(True)
@@ -482,11 +481,3 @@ class DPCTN(nn.Module):
         lateral_map_5 = F.interpolate(lateral_map_51, scale_factor=8, mode='bilinear')
         lateral_map_egde5 = F.interpolate(egde_4, scale_factor=8, mode='bilinear')
         return lateral_map_5,lateral_map_3,lateral_map_2,lateral_map_1,lateral_map_egde5
-    
-
-
-if __name__ == '__main__':
-    ras = caranet().cuda()
-    input_tensor = torch.randn(1, 3, 352, 352).cuda()
-
-    out = ras(input_tensor)
