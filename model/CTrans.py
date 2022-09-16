@@ -14,8 +14,7 @@ from torch.nn.modules.utils import _pair
 logger = logging.getLogger(__name__)
 
 class Channel_Embeddings(nn.Module):
-    """Construct the embeddings from patch, position embeddings.
-    """
+  
     def __init__(self, patchsize, img_size, in_channels):
         super().__init__()
         img_size = _pair(img_size)
