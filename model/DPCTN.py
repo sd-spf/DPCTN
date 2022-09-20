@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .CTrans import CCT
+from .CCT import CCT
 from .ps.ps_vit import ps_vit_b_18
 from .efficientnet_pytorch.model import EfficientNet
 
