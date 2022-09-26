@@ -414,7 +414,7 @@ class DPCTN(nn.Module):
 
         ##HA and LA
         de_1 = self.agg1(x4_rfb, x3_rfb, x2_rfb)
-        egde_1 = self.edge(x1, x2, x2h)
+        egde_1 = self.edge(x1, x2, x3)
         egde_1 = self.egdp1(egde_1)
         eqfusin1 = de_1.mul(egde_1)
         lateral_map_1 = F.interpolate(eqfusin1, scale_factor=8, mode='bilinear')  # #20 1 256 256
